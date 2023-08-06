@@ -1,0 +1,51 @@
+* {
+    font-family: 'Architects Daughter', cursive;
+    margin: 0;
+    padding: 0;
+
+}
+
+.out-moby {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 70vw;
+
+}
+
+.in-both {
+    align-self: center;
+    
+    display: flex;
+    height: 90vh;
+}
+
+.in-title {
+    flex: 0 0 15%;
+    color: blue;
+    font-size: 2rem;
+    /* title垂直排列 */
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    margin-top: 20vh;
+}
+
+/* 参考：https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-orientation */
+
+.in-text p {
+    flex: 0 0 75%;
+    font-size: 1.5rem;
+    /* 盒模型 */
+    display: -webkit-box;
+    /* 盒内子元素布局方向 */
+    -webkit-box-orient: vertical;
+    /* 超出隐藏 */
+    overflow: hidden;
+    /* 文本超出呈现方式：省略号 */
+    text-overflow: ellipsis;
+    /* 限制文本行数 */
+    -webkit-line-clamp: 16;
+    
+}
